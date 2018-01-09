@@ -1,4 +1,4 @@
-[
+export const data = [
     {
         "_id": "59d39f55c847f6cd608f230c",
         "author": {
