@@ -8,7 +8,7 @@ export const lightRed     = '#FFCDD2'
 export const darkRed      = '#C1272D'
 export const white        = '#ffffff'
 export const black        = '#000000'
-export const darkGrey     = '#757575'
+export const darkGrey     = '#424242'
 export const grey         = '#DEDEDE'
 export const grey50       = 'rgba(222, 222, 222, 0.5)'
 export const grey30       = 'rgba(222, 222, 222, 0.7)'
@@ -39,6 +39,9 @@ export const typography = {
   },
   body1: {
     fontWeight: 500,
+  },
+  body2: {
+    color: darkGrey
   }
 }
 
