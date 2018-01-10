@@ -9,6 +9,7 @@ import Card, { CardContent, CardMedia } from 'material-ui/Card'
 import Collapse from 'material-ui/transitions/Collapse'
 import iconFavo from './assets/icons/ic_favorite_border_white_24dp_1x.png'
 import iconMore from './assets/icons/ic_expand_more_white_24dp_2x.png'
+import iconComments from './assets/icons/speech-bubbles-comment-option.png'
 import Typography from 'material-ui/Typography'
 import { data } from './data/listdata'
 import './App.css'
@@ -76,6 +77,11 @@ const styles = {
     left:'50%',
     transform: 'translateX(-50%)',
     top: '-12px'
+  },
+  commentFooter: {
+    marginTop: 20,
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 }
 
@@ -103,9 +109,7 @@ class App extends Component {
   generateDate(date) {
     var newDate = new Date(date)
     return (
-      <Typography style={{marginTop: 20}} type="body2">
-        {date.slice(0,10)}
-      </Typography>
+      date.slice(0,10)
     )
   }
 
@@ -163,7 +167,15 @@ class App extends Component {
                         </Typography>
                         <div className={classes.tooltip}></div>
                       </div>
-                      { this.generateDate(item.comments[0].post_date) }
+                      <div className={classes.commentFooter} >
+                        <Typography type="body2">
+                        { this.generateDate(item.comments[0].post_date) }
+                        </Typography>
+                        <Typography type="body2">
+                          <img style={{height: 16, marginRight: 5}} src={ iconComments } alt="comments icon" />
+                          { item.comments.length } reactie
+                        </Typography>
+                      </div>
                     </CardContent>
                   </Collapse>
                 </Card>
