@@ -1,8 +1,7 @@
 import { createMuiTheme } from 'material-ui/styles'
-import 'typeface-roboto'
 
 // Colors
-export const green        = '#4CAF50'
+export const green        = '#505450'
 export const lightGreen   = '#C8E6C9'
 export const red          = '#F44336'
 export const lightRed     = '#FFCDD2'
@@ -16,8 +15,8 @@ export const grey30       = 'rgba(222, 222, 222, 0.7)'
 
 // Palette
 export const palette = {
-  primary1Color: red,
-  primary2Color: green,
+  primary1Color: green,
+  primary2Color: red,
   accent1Color: lightRed,
   accent2Color: lightGreen,
   textColor: black,
@@ -27,4 +26,20 @@ export const palette = {
   disabledColor: grey30
 }
 
-export default createMuiTheme({ palette })
+//Typography
+export const typography = {
+  fontFamily:
+    'Roboto,"Helvetica Neue",Arial,sans-serif',
+  title: {
+    display: 'inline',
+    fontWeight: 600,
+    textTransform: 'capitalize',
+    borderBottom: '3px solid #ffffff',
+    paddingBottom: 10
+  },
+  body1: {
+    fontWeight: 500,
+  }
+}
+
+export default createMuiTheme({ palette, typography })
